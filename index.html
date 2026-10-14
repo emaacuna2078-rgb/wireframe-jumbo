@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- GOOGLE ANALYTICS AQUÍ -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wireframe Jumbo.cl – Campaña App</title>
@@ -78,7 +79,7 @@
 </header>
 
 <main>
-  <section class="banner">
+  <section class="banner" id="banner">
     <p class="etiqueta">Solo en la app</p>
     <h1>$20.000 de cashback</h1>
     <h2>+ despacho gratis</h2>
@@ -88,15 +89,15 @@
     </div>
   </section>
 
-  <section class="cta">
+  <section class="cta" id="cta">
     <h3>¡Descarga la app y haz tu primera compra!</h3>
     <p>Despacho gratis y $20.000 de cashback</p>
-    <a class="boton" href="#">Descargar la app</a>
+    <a class="boton" id="cta-principal" href="https://www.jumbo.cl/" target="_blank" rel="noopener">Descargar la app</a>
     <span class="letra-chica">*Disponible en compras sobre $50.000</span>
   </section>
 
   <h4 class="seccion">Frutas destacadas</h4>
-  <section class="productos">
+  <section class="productos" id="productos">
     <div class="card">
       <div class="imagen">&#127822;</div>
       <p class="nombre">Manzana</p>
@@ -119,6 +120,19 @@
 </main>
 
 <footer>Wireframe académico – propuesta de campaña de marketing. No es el sitio oficial de Jumbo.</footer>
+
+<script>
+  // Envía el evento clic_cta_principal cuando el visitante hace clic en el CTA
+  document.querySelectorAll('#cta-principal, .cta-principal').forEach(function (boton) {
+    boton.addEventListener('click', function () {
+      if (typeof gtag !== 'function') return;
+      var seccion = boton.closest('section');
+      gtag('event', 'clic_cta_principal', {
+        ubicacion: seccion && seccion.id ? seccion.id : 'sin_seccion'
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
