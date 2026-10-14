@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe Jumbo.cl – Campaña App</title>
+<style>
+  :root {
+    --verde: #1E8E3E;
+    --verde-oscuro: #145F2A;
+    --verde-claro: #EAF3DE;
+    --verde-suave: #97C459;
+    --texto: #2C2C2A;
+    --texto-sec: #5F5E5A;
+    --gris: #F1EFE8;
+    --borde: #D3D1C7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; color: var(--texto); background: #ffffff; }
+
+  header { background: var(--verde); padding: 14px 24px; }
+  .top { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .logo { color: #fff; font-size: 26px; font-weight: bold; text-decoration: none; }
+  .logo span { color: #C0DD97; }
+  .acciones { display: flex; align-items: center; gap: 20px; color: #fff; font-size: 15px; }
+  .acciones a { color: #fff; text-decoration: none; }
+  .carro { font-size: 22px; }
+  .buscador { max-width: 1100px; margin: 12px auto 0; }
+  .buscador input { width: 100%; border: none; border-radius: 24px; padding: 12px 20px; font-size: 15px; outline: none; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+  .banner { background: var(--verde-claro); border: 1px solid var(--verde-suave); border-radius: 16px; padding: 40px 32px; margin-bottom: 24px; }
+  .banner .etiqueta { color: var(--verde-oscuro); font-size: 14px; margin-bottom: 6px; }
+  .banner h1 { font-size: 40px; color: #173404; }
+  .banner h2 { font-size: 28px; color: #27500A; font-weight: normal; margin-top: 4px; }
+  .chips { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .chip { background: #fff; color: #27500A; border-radius: 20px; padding: 6px 14px; font-size: 14px; }
+
+  .cta { border: 2px solid var(--verde); border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 36px; }
+  .cta h3 { font-size: 24px; color: #173404; margin-bottom: 6px; }
+  .cta p { color: var(--texto-sec); margin-bottom: 16px; }
+  .boton { display: inline-block; background: var(--verde); color: #fff; text-decoration: none; padding: 14px 36px; border-radius: 30px; font-size: 16px; font-weight: bold; }
+  .boton:hover { background: var(--verde-oscuro); }
+  .letra-chica { display: block; margin-top: 12px; font-size: 12px; color: var(--texto-sec); }
+
+  .seccion { font-size: 20px; margin-bottom: 14px; }
+  .productos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { border: 1px solid var(--borde); border-radius: 14px; padding: 16px; }
+  .imagen { background: var(--gris); border-radius: 10px; height: 160px; display: flex; align-items: center; justify-content: center; font-size: 56px; }
+  .card .nombre { margin-top: 12px; font-size: 16px; }
+  .card .precio { font-weight: bold; font-size: 18px; margin-top: 4px; }
+  .agregar { margin-top: 12px; width: 100%; background: #fff; border: 1.5px solid var(--verde); color: var(--verde); border-radius: 24px; padding: 8px; font-size: 15px; cursor: pointer; }
+  .agregar:hover { background: var(--verde); color: #fff; }
+
+  footer { text-align: center; color: var(--texto-sec); font-size: 12px; padding: 30px 16px; }
+
+  @media (max-width: 700px) {
+    .banner h1 { font-size: 30px; }
+    .banner h2 { font-size: 22px; }
+    .productos { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <a class="logo" href="#">Jumbo<span>.cl</span></a>
+    <div class="acciones">
+      <a href="#">Ingresa</a>
+      <span class="carro" aria-label="Carro">&#128722;</span>
+    </div>
+  </div>
+  <div class="buscador">
+    <input type="text" placeholder="tomate" aria-label="Buscar productos">
+  </div>
+</header>
+
+<main>
+  <section class="banner">
+    <p class="etiqueta">Solo en la app</p>
+    <h1>$20.000 de cashback</h1>
+    <h2>+ despacho gratis</h2>
+    <div class="chips">
+      <span class="chip">&#128666; A tu casa</span>
+      <span class="chip">&#9201; Sin filas</span>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h3>¡Descarga la app y haz tu primera compra!</h3>
+    <p>Despacho gratis y $20.000 de cashback</p>
+    <a class="boton" href="#">Descargar la app</a>
+    <span class="letra-chica">*Disponible en compras sobre $50.000</span>
+  </section>
+
+  <h4 class="seccion">Frutas destacadas</h4>
+  <section class="productos">
+    <div class="card">
+      <div class="imagen">&#127822;</div>
+      <p class="nombre">Manzana</p>
+      <p class="precio">$ ---</p>
+      <button class="agregar">Agregar</button>
+    </div>
+    <div class="card">
+      <div class="imagen">&#127820;</div>
+      <p class="nombre">Plátano</p>
+      <p class="precio">$ ---</p>
+      <button class="agregar">Agregar</button>
+    </div>
+    <div class="card">
+      <div class="imagen">&#127824;</div>
+      <p class="nombre">Pera</p>
+      <p class="precio">$ ---</p>
+      <button class="agregar">Agregar</button>
+    </div>
+  </section>
+</main>
+
+<footer>Wireframe académico – propuesta de campaña de marketing. No es el sitio oficial de Jumbo.</footer>
+
+</body>
+</html>
